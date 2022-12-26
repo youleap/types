@@ -2,7 +2,7 @@
   "name": "@youleap/types",
   "version": "1.0.0",
   "description": "@youleap/types for external and internal components, dashboards and functions.",
-  "license": "Apache License 2.0",
+  "license": "Apache-2.0",
   "repository": "@youleap/types",
   "author": {
     "name": "Youleap Developers",
