@@ -2,7 +2,7 @@
  * @description A field type for ArrayField which will return the field name and value as an array, can be used with multiple generic types such as `string`, `string[]`, `number`, `number[]`, `boolean` or `boolean[]`.
  * @type ArrayField
  * @example
- * ```
+ * ```jsx
  *  import type { ArrayField } from '@youleap/types';
  *
  *  interface Props {
