@@ -8,13 +8,13 @@
  *  interface Props {
  *      userEmail: EmailField<string>;
  *  }
-*
-*  function ExampleComponent(props: Props) {
-  *      const { userEmail } = props;
-  *      return (
-  *          <div>
-  *              <h1>User Profile</h1>
-  *              <p>Authenticate User</p>
+ *
+ *  function ExampleComponent(props: Props) {
+ *      const { userEmail } = props;
+ *      return (
+ *          <div>
+ *              <h1>User Profile</h1>
+ *              <p>Authenticate User</p>
  *              <button onClick={()=>authenticateUser(userEmail.value)}>Send Authentication Email</button>
  *          </div>
  *      )
@@ -23,11 +23,7 @@
  * @category Field
  * @readonly
  */
-export type EmailField<ValueType> = Readonly<{
+export type EmailField<ValueType extends string | Array<string>> = Readonly<{
   field: string;
-  value: ValueType extends Array<string>
-    ? ValueType
-    : ValueType extends string
-    ? ValueType
-    : never;
+  value: ValueType;
 }>;

@@ -25,19 +25,15 @@
  * @category Field
  * @readonly
  */
-export type ArrayField<ValueType> = Readonly<{
+export type ArrayField<
+  ValueType extends
+    | string
+    | boolean
+    | number
+    | Array<string>
+    | Array<boolean>
+    | Array<number>
+> = Readonly<{
   field: string;
-  value: ValueType extends Array<string>
-    ? Array<ValueType>
-    : ValueType extends string
-    ? Array<ValueType>
-    : ValueType extends Array<number>
-    ? Array<ValueType>
-    : ValueType extends number
-    ? Array<ValueType>
-    : ValueType extends Array<boolean>
-    ? Array<ValueType>
-    : ValueType extends boolean
-    ? Array<ValueType>
-    : never;
+  value: Array<ValueType>;
 }>;

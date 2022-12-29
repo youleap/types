@@ -26,11 +26,7 @@
  * @category Field
  * @readonly
  */
-export type JsonField<ValueType> = Readonly<{
+export type JsonField<ValueType extends unknown | Array<unknown>> = Readonly<{
   field: string;
-  value: ValueType extends Array<unknown>
-    ? ValueType
-    : ValueType extends unknown
-    ? ValueType
-    : never;
+  value: ValueType;
 }>;

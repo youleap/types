@@ -29,12 +29,8 @@ import { PrecisionOptions } from "../utility/precision-options";
  * @category Field
  * @readonly
  */
-export type PercentField<ValueType> = Readonly<{
+export type PercentField<ValueType extends number | Array<number>> = Readonly<{
   field: string;
-  value: ValueType extends Array<number>
-    ? ValueType
-    : ValueType extends number
-    ? ValueType
-    : never;
+  value: ValueType;
   precision: PrecisionOptions;
 }>;

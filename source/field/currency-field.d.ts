@@ -27,13 +27,9 @@ import { CurrencySymbols } from "../utility/currency-symbols";
  * @category Field
  * @readonly
  */
-export type CurrencyField<ValueType> = Readonly<{
+export type CurrencyField<ValueType extends number | Array<number>> = Readonly<{
   field: string;
-  value: ValueType extends Array<number>
-    ? ValueType
-    : ValueType extends number
-    ? ValueType
-    : never;
+  value: ValueType;
   precision: PrecisionOptions;
   currencyType: CurrencySymbols;
 }>;

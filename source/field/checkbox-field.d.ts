@@ -26,11 +26,8 @@
  * @category Field
  * @readonly
  */
-export type CheckboxField<ValueType> = Readonly<{
-  field: string;
-  value: ValueType extends Array<boolean>
-    ? ValueType
-    : ValueType extends boolean
-    ? ValueType
-    : never;
-}>;
+export type CheckboxField<ValueType extends boolean | Array<boolean>> =
+  Readonly<{
+    field: string;
+    value: ValueType;
+  }>;

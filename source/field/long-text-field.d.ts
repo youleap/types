@@ -22,11 +22,7 @@
  * @category Field
  * @readonly
  */
-export type LongTextField<ValueType> = Readonly<{
+export type LongTextField<ValueType extends string | Array<string>> = Readonly<{
   field: string;
-  value: ValueType extends Array<string>
-    ? ValueType
-    : ValueType extends string
-    ? ValueType
-    : never;
+  value: ValueType;
 }>;

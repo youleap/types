@@ -22,11 +22,8 @@
  * @category Field
  * @readonly
  */
-export type PhoneNumberField<ValueType> = Readonly<{
-  field: string;
-  value: ValueType extends Array<string>
-    ? ValueType
-    : ValueType extends string
-    ? ValueType
-    : never;
-}>;
+export type PhoneNumberField<ValueType extends string | Array<string>> =
+  Readonly<{
+    field: string;
+    value: ValueType;
+  }>;

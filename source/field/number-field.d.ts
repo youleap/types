@@ -22,11 +22,7 @@
  * @category Field
  * @readonly
  */
-export type NumberField<ValueType> = Readonly<{
+export type NumberField<ValueType extends number | Array<number>> = Readonly<{
   field: string;
-  value: ValueType extends Array<number>
-    ? ValueType
-    : ValueType extends number
-    ? ValueType
-    : never;
+  value: ValueType;
 }>;

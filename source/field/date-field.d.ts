@@ -26,11 +26,7 @@
  * @category Field
  * @readonly
  */
-export type DateField<ValueType> = Readonly<{
+export type DateField<ValueType extends Date | Array<Date>> = Readonly<{
   field: string;
-  value: ValueType extends Array<Date>
-    ? ValueType
-    : ValueType extends Date
-    ? ValueType
-    : never;
+  value: ValueType;
 }>;

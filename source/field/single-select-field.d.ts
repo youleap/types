@@ -32,12 +32,9 @@ import { SelectOptions } from "../utility/select-options";
  * @category Field
  * @readonly
  */
-export type SingleSelectField<ValueType> = Readonly<{
-  field: string;
-  value: ValueType extends Array<string>
-    ? ValueType
-    : ValueType extends string
-    ? ValueType
-    : never;
-  options: Array<SelectOptions>;
-}>;
+export type SingleSelectField<ValueType extends string | Array<string>> =
+  Readonly<{
+    field: string;
+    value: ValueType;
+    options: Array<SelectOptions>;
+  }>;

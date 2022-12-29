@@ -34,12 +34,9 @@ import { SelectOptions } from "../utility/select-options";
  * @category Field
  * @readonly
  */
-export type MultiSelectField<ValueType> = Readonly<{
-  field: string;
-  value: ValueType extends Array<string>
-    ? Array<ValueType>
-    : ValueType extends string
-    ? Array<ValueType>
-    : never;
-  options: Array<SelectOptions>;
-}>;
+export type MultiSelectField<ValueType extends string | Array<string>> =
+  Readonly<{
+    field: string;
+    value: Array<ValueType>;
+    options: Array<SelectOptions>;
+  }>;

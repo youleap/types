@@ -17,11 +17,7 @@
  * @category Field
  * @readonly
  */
-export type UrlField<ValueType> = Readonly<{
+export type UrlField<ValueType extends string | Array<string>> = Readonly<{
   field: string;
-  value: ValueType extends Array<string>
-    ? ValueType
-    : ValueType extends string
-    ? ValueType
-    : never;
+  value: ValueType;
 }>;
