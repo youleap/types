@@ -31,5 +31,5 @@ export type CurrencyField<ValueType extends number | Array<number>> = Readonly<{
   field: string;
   value: ValueType;
   precision: PrecisionOptions;
-  currencyType: CurrencySymbols;
+  currencySymbol: CurrencySymbols;
 }>;
