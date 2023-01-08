@@ -1,0 +1,59 @@
+{
+  "name": "@youleap/types",
+  "version": "1.0.1",
+  "description": "@youleap/types for external and internal components, dashboards and functions.",
+  "license": "Apache-2.0",
+  "repository": "@youleap/types",
+  "author": {
+    "name": "Youleap Developers",
+    "email": "developer@youleap.com",
+    "url": "https://youleap.com"
+  },
+  "types": "./index.d.ts",
+  "engines": {
+    "node": ">=14.16"
+  },
+  "scripts": {
+    "test": "xo && tsd && tsc && node script/source-files-extension.js"
+  },
+  "files": [
+    "index.d.ts",
+    "source"
+  ],
+  "keywords": [
+    "youleap",
+    "typescript",
+    "ts",
+    "types",
+    "utility",
+    "util",
+    "utilities",
+    "merge",
+    "json",
+    "generics"
+  ],
+  "devDependencies": {
+    "@sindresorhus/tsconfig": "~0.7.0",
+    "expect-type": "^0.15.0",
+    "tsd": "^0.24.1",
+    "typescript": "^4.9.3",
+    "xo": "^0.53.1"
+  },
+  "xo": {
+    "rules": {
+      "@typescript-eslint/ban-ts-comment": "off",
+      "@typescript-eslint/ban-types": "off",
+      "@typescript-eslint/naming-convention": "off",
+      "import/extensions": "off",
+      "@typescript-eslint/no-redeclare": "off",
+      "@typescript-eslint/no-confusing-void-expression": "off",
+      "@typescript-eslint/indent": "off",
+      "@typescript-eslint/array-type": [
+        "error",
+        {
+          "default": "generic"
+        }
+      ]
+    }
+  }
+}
