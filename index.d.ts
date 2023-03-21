@@ -19,3 +19,7 @@ export type { PhoneNumberField } from "./source/field/phone-number-field";
 export type { SingleSelectField } from "./source/field/single-select-field";
 export type { SingleLineTextField } from "./source/field/single-line-text-field";
 export type { UrlField } from "./source/field/url-field";
+
+//Data
+export type { FilteredData } from "./source/data/filtered-data";
+export type { QueryData } from "./source/data/query-data";

@@ -1,4 +1,4 @@
-import { PrecisionOptions } from "../utility/precision-options";
+import type { PrecisionOptions } from "../utility/precision-options";
 
 /**
  * @description A field type for PercentField which will return the field name and value, can be used with only two types of generics, `number` or `number[]`.
