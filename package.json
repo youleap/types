@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "description": "@youleap/types for external and internal components, dashboards and functions.",
   "license": "Apache-2.0",
-  "repository": "https://github.com/youleap/types",
+  "repository": "youleap/types",
   "author": {
     "name": "Youleap Developers",
     "email": "developer@youleap.com",
