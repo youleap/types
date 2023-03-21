@@ -4,20 +4,27 @@
  * @example
  * ```
  *  import type { FilteredData } from '@youleap/types';
+ *  import { DataGrid } from '@mui/x-data-grid';
+ *
+ *  interface UserInterface {
+ *      id: string;
+ *      name: string;
+ *      avatar: string;
+ *      age: number;
+ *  }
  *
  *  interface Props {
- *      users: FilteredData;
+ *      users: FilteredData<UserInterface>;
  *  }
  *
  *  function ExampleComponent(props: Props) {
- *      const { users } = props;
- *      const rows: GridRowsProp = users.map((user, index) => {
- *          return {id: index, ...user};
- *      });
- *
- *      const columns: Array<GridColDef> = Object.keys(users[0]).map(key => {
- *          return { field: key, headerName: key, width: 150 };
- *      });
+ *      const rows: GridRowsProp = props.users;
+ *      const columns: Array<GridColDef> = [
+ *          { field: "id", headerName: "ID", width: 50},
+ *          { field: "name", headerName: "Name", width: 150},
+ *          { field: "avatar", headerName: "Avatar", width: 150},
+ *          { field: "age", headerName: "Age", width: 150},
+ *      ]
  *
  *      return (
  *          <div>
@@ -30,4 +37,6 @@
  * @category Data
  * @readonly
  */
-export type FilteredData = Readonly<Array<Record<string, unknown>>>;
+export type FilteredData<DataSchema = Record<string, unknown>> = Readonly<
+  Array<DataSchema>
+>;

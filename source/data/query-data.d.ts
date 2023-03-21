@@ -3,36 +3,37 @@
  * @type QueryData
  * @example
  * ```
- *  import type { QueryData, FilteredData } from '@youleap/types';
- *  import { DataGrid, GridRowsProp, GridColDef } from '@mui/x-data-grid';
+ *  import type { QueryData, FilteredData } from "@youleap/types";
+ *  import { DataGrid, GridRowsProp, GridColDef } from "@mui/x-data-grid";
+ *
+ *  interface UserInterface {
+ *    id: string;
+ *    name: string;
+ *    avatar: string;
+ *    age: number;
+ *  }
  *
  *  interface Props {
- *      userId: QueryData;
- *      users: FilteredData;
+ *    userId: QueryData;
+ *    users: FilteredData<UserInterface>;
  *  }
  *
  *  function ExampleComponent(props: Props) {
- *      const { users, userId } = props;
+ *    const { users, userId } = props;
  *
- *      const user = users.find(user => user.id === userId);
+ *    const user = users.find((user) => user.id === userId);
  *
- *      return (
- *          <>
- *              { user != null ?
- *                  <div>
- *                      <img src={user.avatar} alt="user avatar" />
- *                      <h1>Welcome {user.name}!</h1>
- *                  </div>
- *                  :
- *                  <div>
- *                      Could not load user.
- *                  </div>
- *              }
- *          </>
- *      )
+ *    return user != null ? (
+ *      <div>
+ *        <img src={user.avatar} alt="user avatar" />
+ *        <h1>Welcome {user.name}!</h1>
+ *      </div>
+ *    ) : (
+ *      <div>Could not load user.</div>
+ *    );
  *  }
  * ```
  * @category Data
  * @readonly
  */
-export type QueryData = Readonly<string>;
+export type QueryData = Readonly<string | Array<string>>;
