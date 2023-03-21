@@ -1,5 +1,5 @@
-import { PrecisionOptions } from "./percent-field";
-import { CurrencySymbols } from "../utility/currency-symbols";
+import type { PrecisionOptions } from "./percent-field";
+import type { CurrencySymbols } from "../utility/currency-symbols";
 
 /**
  * @description A field type for CurrencyField which will return the field name and value, can be used with only two types of generics, `number` or `number[]`.

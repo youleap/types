@@ -1,4 +1,4 @@
-import { SelectOptions } from "../utility/select-options";
+import type { SelectOptions } from "../utility/select-options";
 
 /**
  * @description A field type for SingleSelectField which will return the field name, value and their possible options. The type can be used with only two types of generics, `string` or `string[]`.

@@ -1,6 +1,6 @@
 {
   "name": "@youleap/types",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "@youleap/types for external and internal components, dashboards and functions.",
   "license": "Apache-2.0",
   "repository": "@youleap/types",
